@@ -1,0 +1,68 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Demo with Tailwind and Lit</title>
+    <script type="module" src="../../components/lit/bitcoin-price.js"></script>
+    <script type="module" src="../../components/vanilla/sell-item.js"></script>
+    <script type="module" src="../../components/lit/sell-item.js"></script>
+    <script type="module" src="../../components/vanilla/todo-list.js"></script>
+    <script type="module" src="../../components/lit/todo-list.js"></script>
+    <script type="module" src="./index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    sell-item-lit {
+        --sell-item-border-color: #007bff;
+        --sell-item-background-color: #f0f0f0;
+        --sell-item-text-color: #000;
+        --sell-item-title-color: #007bff;
+        --sell-item-price-color: #555;
+        --sell-item-discount-price-color: #ff5733;
+        --sell-item-discount-color: #d9534f;
+    }
+</style>
+<body class="bg-gray-100 p-8">
+    <a href="/" class="fixed bottom-2 right-2 bg-gray-500 text-white py-2 px-4 rounded">Back to Index</a>
+    <div class="flex justify-center items-center">
+        <bitcoin-price class="fixed top-0 right-0 p-4"></bitcoin-price>
+    </div>
+    <h1 class="text-2xl font-bold mb-4">Comparison of Components</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-xl font-semibold mb-2">Vanilla Web Component</h2>
+            <sell-item 
+                photo-url="https://via.placeholder.com/300" 
+                title="Vanilla Gadget" 
+                original-price="100" 
+                discount-price="75" 
+                discount="25" 
+                rating="4">
+            </sell-item>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" id="update-vanilla">Update Vanilla Component</button>
+
+            <h2 class="text-xl font-semibold mt-8 mb-2">Vanilla Todo List Component</h2>
+            <todo-list title="Vanilla Todo List"></todo-list>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-semibold mb-2">Lit Web Component</h2>
+            <sell-item-lit 
+              photo-url="https://via.placeholder.com/300" 
+              title="Lit Gadget" 
+              original-price="100" 
+              discount-price="75" 
+              discount="25" 
+              rating="4.5">
+            </sell-item-lit>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" id="update-lit">Update Lit Component</button>
+
+            <h2 class="text-xl font-semibold mt-8 mb-2">Lit Todo List Component</h2>
+            <todo-list-lit title="Lit Todo List"></todo-list-lit>
+        </div>
+    </div>
+</body>
+</html>
