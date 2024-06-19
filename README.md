@@ -3,7 +3,10 @@
 We have developed 2 different components to show the usefulness of using web components in the development of a web application. We used 2 approaches, using the standard elements (template, custom element & shadow DOM) and using the lit-html and lit-element library. We show those elements in a simple application to create the components and interact with them, we have also integrated a bitcoin api and other web components already developed to show the easy integration of these components to our application. 
 
 ## Web
-Available in: [https://wasm.cparedesr.com/svelte](https://wasm.cparedesr.com/svelte)
+Available in: [https://wasm.cparedesr.com](https://wasm.cparedesr.com)
+
+## Local
+Run `npm install` and `npm start`
 
 ## Components Features
 - Sell-Item: Component to show the information of an item with price, title, discount, rating and image.
@@ -27,4 +30,3 @@ Available in: [https://wasm.cparedesr.com/svelte](https://wasm.cparedesr.com/sve
 - Valentina Campaña
 - Cristóbal Carrasco
 - Carlos Paredes
-
