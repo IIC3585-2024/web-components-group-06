@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Component Creator</title>
+    <script type="module" src="../../components/lit/bitcoin-price.js"></script>
+    <script type="module" src="../../components/vanilla/sell-item.js"></script>
+    <script type="module" src="../../components/lit/sell-item.js"></script>
+    <script type="module" src="../../components/vanilla/todo-list.js"></script>
+    <script type="module" src="../../components/lit/todo-list.js"></script>
+    <script type="module" src="https://unpkg.com/deep-chat@1.4.11/dist/deepChat.bundle.js"></script>
+    <script type="module" src="https://unpkg.com/chessboard-element?module"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6 grid grid-cols-5 gap-4">
+  <a href="/" class="fixed bottom-2 right-2 bg-gray-500 text-white py-2 px-4 rounded">Back to Index</a>
+  <div id="props-form-modal" class="hidden fixed w-full h-full top-0 left-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+    <div class="bg-white w-2/3 p-4 shadow-md rounded">
+        <div class="w-full mb-4 flex justify-between">
+            <h1 id="modal-name" class="text-centerfont-xl font-semibold"></h1>
+            <button id="close-modal" class="text-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+        </div>
+        <div id="props-form" class="mb-4">
+            <form class="bg-white">
+                <div id="form-fields"></div>
+                <button id="create-component" type="button" class="bg-indigo-500 text-white px-4 py-2 rounded mt-2">Create</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+    <div class="w-full col-span-2">
+        <h1 class="text-2xl font-bold mb-4">Dynamic Component Creator</h1>
+
+      <div class="mb-4 flex flex-col gap-4">
+        <div class="grid grid-cols-2 items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="col-span-2 text-lg font-semibold mb-1">Component: sell-item</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="sell-item">Sell Item</button>
+          <button class="component-button bg-purple-500 text-white px-4 py-2 rounded" data-component="sell-item-lit">Sell Item (LIT)</button>
+        </div>
+        <div class="grid grid-cols-2 items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="col-span-2 text-lg font-semibold mb-1">Component: todo-list</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="todo-list">Todo List</button>
+          <button class="component-button bg-purple-500 text-white px-4 py-2 rounded" data-component="todo-list-lit">Todo List (Lit)</button>
+        </div>
+        <div class="grid items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="text-lg font-semibold mb-1">Component: bitcoin-price</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="bitcoin-price">Bitcoin Price</button>
+        </div>
+        <div class="grid items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="text-lg font-semibold mb-1">Online Component: chess-board</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="chess-board">Chess board</button>
+        </div>
+        <div class="grid items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="text-lg font-semibold mb-1">Online Component: deep-chat</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="deep-chat">Deep Chat</button>
+        </div>
+        <div class="grid items-center p-2 gap-x-4 rounded-md border-2 border-gray-300">
+          <pre class="text-lg font-semibold mb-1">Online Component: model-viewer</pre>
+          <button class="component-button bg-indigo-500 text-white px-4 py-2 rounded" data-component="model-viewer">Model Viewer</button>
+        </div>
+      </div>
+    </div>
+    <div class="w-full col-span-3">
+        <h2 class="text-xl font-semibold mb-2">Components</h2>
+        <div id="components-container" class="grid grid-cols-2 gap-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
