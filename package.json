@@ -1,0 +1,26 @@
+{
+  "name": "web-components-group-06",
+  "version": "1.0.0",
+  "description": "web-components-group-06 created by GitHub Classroom",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "http-server": "^14.1.1",
+    "rollup": "^4.18.0"
+  },
+  "dependencies": {
+    "deep-chat": "^1.4.11",
+    "lit": "^3.1.4",
+    "lit-html": "^3.1.4"
+  }
+}
